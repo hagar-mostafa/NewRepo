@@ -37,5 +37,39 @@ e) Give one situation where Deep Copy would be safer than Shallow Copy
         When you have a list/array inside an object (i mean u have a reference type)
          */
         #endregion
+
+        #region Theortical Question Q3
+        /*
+     Q3 Static Members
+a) What is a static field, and how is it different from an instance field?
+        A static field belongs to the class, shared by all instances. An instance field belongs to each object separately.
+
+b) What is a static method? Can a static method directly access instance members?
+        A static method belongs to the class, not an object. It cannot directly access instance members (needs an object reference to do so).
+c) What is a static constructor, and when is it executed?
+d) What is a static class? Can you create an object from a static class?
+         */
+        #endregion
+
+        #region Theortical Question Q4
+        /*
+    Q4 Extension Methods
+a) What is an Extension Method?
+        A method added to an existing class without modifying its source code or inheriting from it.
+
+b) What keyword must be used in the first parameter of an extension method?
+        this keyword — placed before the type in the first parameter.
+
+c) Where must an extension method be declared?
+        Inside a static class, in a static method
+
+d) Can an extension method access private members of the class it extends?
+        No. It can only access public members — it's not part of the original class.
+
+         */
+        #endregion
+
+
+
     }
 }
