@@ -69,6 +69,26 @@ d) Can an extension method access private members of the class it extends?
          */
         #endregion
 
+        #region Theortical Question Q5
+        /*
+   Q5 Partial Classes and Partial Methods
+a) What is a Partial Class?
+A class split across multiple files but treated as one class by the compiler.
+
+b) Why would a developer split one class into multiple files?
+1. Keep auto-generated code separate from developer code
+2.Large classes become easier to manage
+3.Multiple developers work on the same class simultaneously
+
+c) What is a Partial Method?
+  A method declared in one partial part and implemented in another part of the same class.
+
+d) What happens if a declared partial method has no implementation?
+ The compiler removes it completely — no error, no call, it simply disappears at compile time.
+         */
+        #endregion
+
+
 
 
     }
