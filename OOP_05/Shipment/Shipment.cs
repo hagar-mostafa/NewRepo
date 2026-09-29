@@ -105,6 +105,14 @@ namespace OOP_05.Shipment
             return $"{TrackingCode} , {Description} ,  {Weight}  , {DeliveryFee} , {Address.City}";
         }
 
+        // Static Field 
+        #region Static Field 
+        public static int TotalShipments = 0 ;
+        public void countShipments()
+        {
+            TotalShipments++;
+        }
+        #endregion
     }
 
 }
