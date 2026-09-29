@@ -8,7 +8,7 @@ namespace OOP_05.Shipment
     {
         // Static class: cannot be instantiated, and all its members must be static
         public static void PrintSeparator()
-        { 
+        {
             // For exact output ===
             Console.WriteLine(new string('=', 40));
         }
