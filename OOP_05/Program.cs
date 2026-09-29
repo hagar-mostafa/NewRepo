@@ -90,6 +90,7 @@ d) What happens if a declared partial method has no implementation?
         #endregion
 
         #region 1 Object Copying
+        Console.WriteLine("---------------------------Object Copying-----------------------------");
         // 1.Assign => same object
         Shipment shipment = new Shipment("0xf54", "Iphone60", 100, 600);
         Shipment shipment2 = shipment;
@@ -111,7 +112,13 @@ d) What happens if a declared partial method has no implementation?
 
         #region 2 Shallow Copy
 
-       
+        Console.WriteLine("\n--------------------------Shallow Copy------------------------------");
+        Shipment shipment4 = shipment.Shallow_Copy();
+        shipment4.DeliveryFee = 800;
+        shipment4.TrackingCode = "0x00H";
+        Console.WriteLine(shipment);
+        Console.WriteLine(shipment4);
+
         #endregion
 
     }

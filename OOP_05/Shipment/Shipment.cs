@@ -13,6 +13,11 @@ namespace OOP_05.Shipment
         {
             get
             { return _TrackingCode; }
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                    _TrackingCode = value;
+            }
         }
         private string _Description;
         public string Description
@@ -38,7 +43,7 @@ namespace OOP_05.Shipment
         public decimal DeliveryFee
         {
             get { return _DeliveryFee; }
-            private set
+            set
             {
                 if (value > 0)
                     _DeliveryFee = value;
@@ -48,8 +53,7 @@ namespace OOP_05.Shipment
 
         public Shipment(string trackingCode)
         {
-            if (!string.IsNullOrWhiteSpace(trackingCode))
-                _TrackingCode = trackingCode;
+            TrackingCode = "Unknown";
             Description = "Unknown";
             Weight = 1;
             DeliveryFee = 50;
