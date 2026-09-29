@@ -60,7 +60,7 @@ namespace OOP_05.Shipment
             Description = "Unknown";
             Weight = 1;
             DeliveryFee = 50;
-            Address.City = "UnKnown";
+            countShipments();
         }
 
 
@@ -108,9 +108,9 @@ namespace OOP_05.Shipment
         // Static Field 
         #region Static Field 
         public static int TotalShipments = 0 ;
-        public  void countShipments()
+        public static int  countShipments()
         {
-            TotalShipments++;
+            return TotalShipments++;
         }
         #endregion
 
@@ -119,6 +119,7 @@ namespace OOP_05.Shipment
         {
             Console.WriteLine($"Total Shipments is => {TotalShipments}");
         }
+   
         #endregion
 
         #region Static Constructor

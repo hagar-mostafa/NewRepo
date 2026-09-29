@@ -10,7 +10,7 @@ namespace OOP_05.Shipment
         public static void PrintSeparator()
         {
             // For exact output ===
-            Console.WriteLine(new string('=', 40));
+            Console.Write(new string('=', 40));
         }
 
         public static void PrintSystemTitle()

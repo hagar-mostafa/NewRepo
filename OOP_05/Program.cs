@@ -133,9 +133,13 @@ d) What happens if a declared partial method has no implementation?
         #endregion
 
         #region 4 Static
-
-        Shipment staticshipment = new Shipment();
+        Console.WriteLine("-------------------------Static Field / method / constructor / class--------------------");
+        Shipment static1 = new Shipment();
+        Shipment static2 = new Shipment();
+        Shipment static3 = new Shipment();
         Shipment.PrintcountShipments();
+        Console.WriteLine();
+        DeliveryUtilities.PrintSystemTitle();
         #endregion
 
 
