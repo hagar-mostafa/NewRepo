@@ -123,9 +123,12 @@ d) What happens if a declared partial method has no implementation?
 
         #region 3 Deep Copy
 
-        Console.WriteLine("\n--------------------------Shallow Copy------------------------------");
-        Shipment shipment5 = shipment;
-       
+        Console.WriteLine("\n--------------------------Deep Copy------------------------------");
+        Shipment shipment5 = shipment.Deep_Copy();
+        shipment5.Address.City = "ElObour";
+        Console.WriteLine(shipment);
+        Console.WriteLine(shipment5);
+
 
         #endregion
 
