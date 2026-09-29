@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOP_05.Shipment;
+using System;
 #nullable disable 
 public class Program
 {
@@ -88,7 +89,28 @@ d) What happens if a declared partial method has no implementation?
          */
         #endregion
 
+        #region 1 Object Copying
+        // 1.Assign => same object
+        Shipment shipment = new Shipment("0xf54", "Iphone60", 100, 600);
+        Shipment shipment2 = shipment;
+        shipment2.Description = "Laptop";
+        shipment2.Weight = 500;
 
+        Console.WriteLine(shipment);
+        Console.WriteLine(shipment2);
+
+        //2.Copy => seprated
+
+        Shipment shipment3 = shipment.CopyShipment();
+        shipment.Weight = 300;
+        shipment.Description = "phone";
+
+        Console.WriteLine(shipment);
+        Console.WriteLine(shipment3);
+
+
+
+        #endregion
 
 
     }
