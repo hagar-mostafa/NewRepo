@@ -68,6 +68,16 @@ namespace OOP_05.Shipment
         {
             return new Shipment(this.TrackingCode, this.Description, this.Weight, this.DeliveryFee);
         }
+        // Way one in Shallow copy
+        public Shipment Shallow_Copy()
+        {
+            return (Shipment)this.MemberwiseClone();
+        }
+        // Way two in Shallow copy
+        public object Clone()
+        {
+            return MemberwiseClone();
+        }
 
         public override string ToString()
         {

@@ -109,6 +109,10 @@ d) What happens if a declared partial method has no implementation?
         Console.WriteLine(shipment3);
         #endregion
 
+        #region 2 Shallow Copy
+
+       
+        #endregion
 
     }
 }
