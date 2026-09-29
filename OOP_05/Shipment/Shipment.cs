@@ -113,6 +113,13 @@ namespace OOP_05.Shipment
             TotalShipments++;
         }
         #endregion
+
+        #region Static Constructor
+     static Shipment()
+        {
+            Console.WriteLine("Shipment System Initialized");
+        }
+        #endregion
     }
 
 }
