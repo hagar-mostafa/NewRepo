@@ -3,7 +3,7 @@ using System;
 #nullable disable 
 public class Program
 {
- static void Main()
+ static void Main(string[] args)
     {
         #region Theortical Question Q1
         /*
@@ -92,7 +92,7 @@ d) What happens if a declared partial method has no implementation?
         #region 1 Object Copying
         Console.WriteLine("---------------------------Object Copying-----------------------------");
         // 1.Assign => same object
-        Shipment shipment = new Shipment("0xf54", "Iphone60", 100, 600);
+        Shipment shipment = new Shipment("0xf54", "Iphone60", 100, 600 , new Address("Cairo"));
         Shipment shipment2 = shipment;
         shipment2.Description = "Laptop";
         shipment2.Weight = 500;
@@ -120,6 +120,15 @@ d) What happens if a declared partial method has no implementation?
         Console.WriteLine(shipment4);
 
         #endregion
+
+        #region 3 Deep Copy
+
+        Console.WriteLine("\n--------------------------Shallow Copy------------------------------");
+        Shipment shipment5 = shipment;
+       
+
+        #endregion
+
 
     }
 }

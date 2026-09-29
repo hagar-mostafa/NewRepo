@@ -51,27 +51,37 @@ namespace OOP_05.Shipment
 
         }
 
-        public Shipment(string trackingCode)
+        public Address Address;
+        private static string DefaultCity;
+
+        public Shipment() // Prameterless Constructor
         {
             TrackingCode = "Unknown";
             Description = "Unknown";
             Weight = 1;
             DeliveryFee = 50;
+            Address.City = "UnKnown";
         }
+
+
         //------constructor overloading-----
-        public Shipment(string trackingCode, string description, decimal weight, decimal deliveryFee)
+        public Shipment(string trackingCode, string description, decimal weight, decimal deliveryFee , Address address)
         {
             if (!string.IsNullOrWhiteSpace(trackingCode))
                 _TrackingCode = trackingCode;
             Description = description;
             Weight = weight;
             DeliveryFee = deliveryFee;
+            Address = address;
+
         }
 
         public Shipment CopyShipment()
         {
-            return new Shipment(this.TrackingCode, this.Description, this.Weight, this.DeliveryFee);
+            return new Shipment(this.TrackingCode, this.Description, this.Weight, this.DeliveryFee , this.Address);
         }
+
+
         // Way one in Shallow copy
         public Shipment Shallow_Copy()
         {
@@ -83,9 +93,16 @@ namespace OOP_05.Shipment
             return MemberwiseClone();
         }
 
+        // The Clone way in Deep Copy
+        public Shipment Deep_Copy()
+        {
+            Shipment shipment = (Shipment)MemberwiseClone();
+            shipment.Address = new Address(Address.City);
+            return shipment;
+        }
         public override string ToString()
         {
-            return $"{TrackingCode} , {Description} ,  {Weight}  , {DeliveryFee}";
+            return $"{TrackingCode} , {Description} ,  {Weight}  , {DeliveryFee} , {Address.City}";
         }
 
     }
