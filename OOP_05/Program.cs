@@ -132,6 +132,14 @@ d) What happens if a declared partial method has no implementation?
 
         #endregion
 
+        #region 4 Static
+
+        Shipment staticshipment = new Shipment();
+        Shipment.PrintcountShipments();
+        #endregion
+
+
+
 
     }
 }

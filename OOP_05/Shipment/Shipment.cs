@@ -108,14 +108,21 @@ namespace OOP_05.Shipment
         // Static Field 
         #region Static Field 
         public static int TotalShipments = 0 ;
-        public void countShipments()
+        public  void countShipments()
         {
             TotalShipments++;
         }
         #endregion
 
+        #region Static method 
+        public static void PrintcountShipments()
+        {
+            Console.WriteLine($"Total Shipments is => {TotalShipments}");
+        }
+        #endregion
+
         #region Static Constructor
-     static Shipment()
+        static Shipment()
         {
             Console.WriteLine("Shipment System Initialized");
         }
